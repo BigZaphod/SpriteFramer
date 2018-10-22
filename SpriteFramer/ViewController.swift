@@ -123,6 +123,7 @@ class ViewController: NSViewController {
 		}
 		
 		let grid = NSBezierPath()
+		grid.lineWidth = 1.5
 
 		for x in stride(from: slices.frameWidth, to: slices.width, by: slices.frameWidth) {
 			grid.move(to: NSPoint(x: x, y: 0))
@@ -137,7 +138,7 @@ class ViewController: NSViewController {
 		slicedImage.lockFocus()
 		
 		if showGridButton.state == .on {
-			NSColor.gridColor.setStroke()
+			NSColor.systemPurple.setStroke()
 			grid.stroke()
 		}
 		
